@@ -5,7 +5,7 @@
   "main": "evo-calendar/js/evo-calendar.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-	"start": "evo-calendar.min.js"
+	"start": "index.html"
   },
   "repository": {
     "type": "git",
