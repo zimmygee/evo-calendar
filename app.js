@@ -8,7 +8,7 @@ var app = express();
 app.use(express.static(__dirname + '/evo-calendar/css'));
 app.use(express.static(__dirname + '/evo-calendar/js'));
 
-fs.readFile('./index.html', function (err, html) {
+fs.readFile('./test.html', function (err, html) {
 
     if (err) throw err;    
 
