@@ -12,3 +12,5 @@ fs.readFile('./index.html', function (err, html) {
         response.end();  
     }).listen(process.env.PORT || 5000);
 });
+
+app.use(express.static(__dirname + '/evo-calendar'));
