@@ -1,6 +1,12 @@
 var http = require('http');
 var fs = require('fs');
 
+var express = require('express');
+var app = express();
+
+
+app.use(express.static(__dirname + '/evo-calendar/css'));
+app.use(express.static(__dirname + '/evo-calendar/js'));
 
 fs.readFile('./index.html', function (err, html) {
 
@@ -12,5 +18,3 @@ fs.readFile('./index.html', function (err, html) {
         response.end();  
     }).listen(process.env.PORT || 5000);
 });
-
-app.use(express.static(__dirname + '/evo-calendar'));
