@@ -5,8 +5,11 @@ var express = require('express');
 var app = express();
 
 
-app.use(express.static(__dirname + '/evo-calendar/css'));
-app.use(express.static(__dirname + '/evo-calendar/js'));
+app.use(express.static(__dirname + './evo-calendar/css'));
+app.use(express.static(__dirname + './evo-calendar/js'));
+app.use(express.static(__dirname + './public/'));
+
+app.get('/', function(req, res) {  res.render('home');});
 
 fs.readFile('./test.html', function (err, html) {
 
